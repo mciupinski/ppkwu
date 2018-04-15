@@ -11,9 +11,10 @@
         <input type="submit" value="Submit">
     </form>
 	
-	<script type="text/javascript">
-    $('input').on('input', function() {
+<script type="text/javascript">
+    $("input").on("input", function() {
         $.post( "localhost:8088/"+this.name+"/"+this.value, ( data ) => {
+		window.alert("In a post")
             if (data == "ok") {
                 window.alert("Received")
             } else {
