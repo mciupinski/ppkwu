@@ -13,7 +13,7 @@
 	
 <script type="text/javascript">
     $("input").on("input", function() {
-        $.post( "localhost:8088/"+this.name+"/"+this.value, ( data ) => {
+        $.post( "localhost:8088/" + this.name + "=" + this.value, ( data ) => {
 		window.alert("In a post")
             if (data == "ok") {
                 window.alert("Received")
